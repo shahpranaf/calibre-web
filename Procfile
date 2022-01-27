@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:8080 app:cps
+web: gunicorn --bind 0.0.0.0:$PORT app:cps
