@@ -125,7 +125,8 @@ DEFAULT_MAIL_SERVER = "mail.example.org"
 
 DEFAULT_PASSWORD    = "admin123"  # nosec
 DEFAULT_PORT        = 8080
-env_CALIBRE_PORT = os.environ.get("CALIBRE_PORT", DEFAULT_PORT)
+env_HEROKU_PORT = os.environ.get("PORT", DEFAULT_PORT)
+env_CALIBRE_PORT = os.environ.get("CALIBRE_PORT", env_HEROKU_PORT)
 try:
     DEFAULT_PORT = int(env_CALIBRE_PORT)
 except ValueError:
