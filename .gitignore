@@ -21,6 +21,7 @@ vendor/
 .pylint.d
 
 # calibre-web
+*.db
 *.log
 
 .idea/
